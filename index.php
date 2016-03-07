@@ -1,4 +1,6 @@
-<?php include("templates/header.php"); ?>
+<?php 
+$title="Homepage";
+include("templates/header.php"); ?>
 
 <!-- FIRST BLOCK -->
 <div id="first-block">

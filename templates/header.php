@@ -8,7 +8,7 @@
    <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Responsive Website with Sticky footer</title>
+      <title><?php echo $title ?></title>
       <link rel="stylesheet" href="css/components.css">
       <link rel="stylesheet" href="css/responsee.css">
       <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
@@ -40,6 +40,7 @@
                         <li><a>Home</a></li>
                         <li><a>Login</a></li>
                         <li><a>About</a></li>
+						 <li><a>Products</a></li>
                         <li><a>Newsletter</a></li>
                         <li><a>Upcoming events</a></li>
                         <li><a>Cart</a></li>
