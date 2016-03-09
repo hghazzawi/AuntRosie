@@ -1,4 +1,4 @@
-<?php include("templates/header.php"); ?>
+<?php $title="About Us"; include("templates/header.php"); ?>
 <h1>About Us</h1>
 <img src="img/MincePieDVD.jpg" alt="Rhod Gilbert and the Award-Winning Mince Pie" style="float:right;width:200px;"/>
 <p>Aunt Rosie's Homemade Pies and Preserves has been making mince pies and vegetable preserves for the past 35 years.</p>
