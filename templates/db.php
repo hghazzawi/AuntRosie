@@ -1,3 +1,4 @@
+<?php
 function db_connect()
 {
   return pg_connect("host=".HOSTNAME." dbname=".DATABASE." user=".USERNAME." password=".PASSWORD." port=".DB_PORT );
