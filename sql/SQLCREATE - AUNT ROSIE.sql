@@ -1,7 +1,7 @@
 DROP TABLE IF EXISTS VenueLocation;
 CREATE TABLE VenueLocation
 (
-     VenueCode VARCHAR(4) PRIMARY KEY,
+     VenueCode INT NOT NULL PRIMARY KEY,
      VenueLocation VARCHAR(40) NOT NULL,
      VenueDate DATE NOT NULL,
      VenueRentalFee MONEY NOT NULL,
@@ -10,99 +10,14 @@ CREATE TABLE VenueLocation
      VenueUtilityCost MONEY NOT NULL
 );
 
-DROP TABLE IF EXISTS Transactions;
-CREATE TABLE Transactions
-(
-     TransactionID VARCHAR(7) PRIMARY KEY,
-     VenueCode VARCHAR(4) NOT NULL REFERENCES VenueLocation(VenueCode),
-     TransactionDate DATE NOT NULL,
-     TotalQuantity  INTEGER NOT NULL,
-     TotalGrossSales MONEY NOT NULL,
-     CustomerName VARCHAR(35) NOT NULL,
-     CustomerEmail VARCHAR(50) NOT NULL,
-     CustomerCellphone CHAR(10) NOT NULL
-);
-
-
-DROP TABLE IF EXISTS Main;
-CREATE TABLE Main
-(
-     ProductCode VARCHAR(4) PRIMARY KEY,
-     GroupCode VARCHAR(10) NOT NULL,
-     ProductType VARCHAR(30) NOT NULL,
-     ProductName  VARCHAR(30) NOT NULL,
-     ProductSize INTEGER NOT NULL,
-     Availability INTEGER NOT NULL,
-     ProductImageBig INTEGER NOT NULL,
-     ProductImageSmall INTEGER NOT NULL,
-     SaleAmount INTEGER NOT NULL,
-     OutOfProduction INTEGER NOT NULL,
-     Calories INTEGER NOT NULL,
-     Fat INTEGER NOT NULL,
-     SaturatedFat INTEGER NOT NULL,
-     TransFat INTEGER NOT NULL,
-     Cholesterol INTEGER NOT NULL,
-     Sodium INTEGER NOT NULL,
-     Carbohydrates INTEGER NOT NULL,
-     DietaryFiber INTEGER NOT NULL,
-     Sugar INTEGER NOT NULL,
-     Protein INTEGER NOT NULL 
-);
-
-DROP TABLE IF EXISTS TransactionLine;
-CREATE TABLE TransactionLine
-(
-     TransactionID VARCHAR(7) NOT NULL REFERENCES Transactions(TransactionID)PRIMARY KEY,
-     ProductCode VARCHAR(4) NOT NULL REFERENCES Main(ProductCode)
-);
-
-DROP TABLE IF EXISTS MainIngredientList;
-CREATE TABLE MainIngredientList
-(
-     IngredientCode VARCHAR(4) PRIMARY KEY,
-     ProductCode VARCHAR(4) NOT NULL REFERENCES Main(ProductCode),
-     Description VARCHAR(50) NOT NULL,
-     IngredientQuantity INTEGER NOT NULL,
-     CostPerQuantity MONEY NOT NULL,
-     IngredientUnit VARCHAR(4) NOT NULL,
-     TotalCost MONEY NOT NULL
-);
-
-DROP TABLE IF EXISTS Inventory;
-CREATE TABLE Inventory
-(
-     InventoryID VARCHAR(4) PRIMARY KEY,
-     IngredientCode VARCHAR(4) NOT NULL REFERENCES MainIngredientList(IngredientCode),
-     Description VARCHAR(50) NOT NULL,
-     QuantityInStock INTEGER NOT NULL,
-     InventoryUnit MONEY NOT NULL,
-     CostPerUnit MONEY NOT NULL
-);
-
-DROP TABLE IF EXISTS Supply;
-CREATE TABLE Supply
-(
-     OrderID VARCHAR(7) PRIMARY KEY,
-     IngredientCode VARCHAR(4) NOT NULL REFERENCES MainIngredientList(IngredientCode),
-     Description VARCHAR(50) NOT NULL,
-     OrderDate DATE NOT NULL,
-     OrderTime TIME NOT NULL,
-     QuantityOrdered INTEGER NOT NULL,
-     SupplyUnit VARCHAR(4) NOT NULL,
-     UnitPrice MONEY NOT NULL,
-     OrderedTo VARCHAR(25) NOT NULL,
-     OrderedBy VARCHAR(25) NOT NULL
-);
-
-
 DROP TABLE IF EXISTS UserInformation;
 CREATE TABLE UserInformation
 (
-     EmployeeCode VARCHAR(4) PRIMARY KEY,
+     EmployeeCode INT NOT NULL PRIMARY KEY,
      FirstName VARCHAR(25) NOT NULL,
      LastName VARCHAR(25) NOT NULL,
      CellNumber VARCHAR(10) NOT NULL,
-     EmailAddress VARCHAR(35) NOT NULL,
+     EmailAddress VARCHAR(50) NOT NULL,
      UserName VARCHAR(25) NOT NULL,
      Password VARCHAR(25) NOT NULL,
      Active Boolean NOT NULL,
@@ -110,3 +25,101 @@ CREATE TABLE UserInformation
      LastLoginDate DATE,
      LastLoginTime TIME
 );
+
+DROP TABLE IF EXISTS Main;
+CREATE TABLE Main
+(
+     ProductCode INT NOT NULL PRIMARY KEY,
+     GroupCode VARCHAR(10) NOT NULL,
+     ProductType VARCHAR(30) NOT NULL,
+     ProductName  VARCHAR(30) NOT NULL,
+     ProductSize INT NOT NULL,
+     Availability BOOLEAN NOT NULL,
+     ProductImageBig VARCHAR(50),
+     ProductImageSmall VARCHAR(50),
+     SaleAmount INT NOT NULL,
+     OutOfProduction BOOLEAN NOT NULL,
+     Calories INT NOT NULL,
+     Fat INT NOT NULL,
+     SaturatedFat INT NOT NULL,
+     TransFat INT NOT NULL,
+     Cholesterol INT NOT NULL,
+     Sodium INT NOT NULL,
+     Carbohydrates INT NOT NULL,
+     DietaryFiber INT NOT NULL,
+     Sugar INT NOT NULL,
+     Protein INT NOT NULL 
+);
+
+DROP TABLE IF EXISTS Transactions;
+CREATE TABLE Transactions
+(
+     TransactionID INT NOT NULL PRIMARY KEY,
+     VenueCode INT NOT NULL REFERENCES VenueLocation(VenueCode),
+     TransactionDate DATE NOT NULL,
+     CustomerFirstName VARCHAR(35),
+     CustomerLastName VARCHAR(35),
+     CustomerEmail VARCHAR(50),
+     CustomerCellphone CHAR(10)
+);
+
+
+
+
+DROP TABLE IF EXISTS TransactionLine;
+CREATE TABLE TransactionLine
+(
+     LineID INT NOT NULL PRIMARY KEY,
+     TransactionID INT NOT NULL REFERENCES Transactions(TransactionID),
+     ProductCode INT NOT NULL REFERENCES Main(ProductCode)
+);
+
+DROP TABLE IF EXISTS Ingredient;
+CREATE TABLE Ingredient
+(
+     IngredientCode INT NOT NULL PRIMARY KEY,
+     IngredientName VARCHAR(50) NOT NULL,
+     Cost MONEY NOT NULL
+);
+
+DROP TABLE IF EXISTS MainIngredientList;
+CREATE TABLE MainIngredientList
+(
+     IngredientListCode INT NOT NULL PRIMARY KEY,
+     IngredientCode INT NOT NULL REFERENCES Ingredient(IngredientCode),
+     ProductCode INT NOT NULL REFERENCES Main(ProductCode),
+     Description VARCHAR(50) NOT NULL,
+     IngredientQuantity INT NOT NULL,
+     CostPerQuantity MONEY NOT NULL,
+     IngredientUnit VARCHAR(4) NOT NULL
+);
+
+
+
+DROP TABLE IF EXISTS Inventory;
+CREATE TABLE Inventory
+(
+     InventoryID INT NOT NULL PRIMARY KEY,
+     IngredientCode INT NOT NULL REFERENCES Ingredient(IngredientCode),
+     Description VARCHAR(50) NOT NULL,
+     QuantityInStock INT NOT NULL,
+     InventoryUnit VARCHAR(4) NOT NULL,
+     CostPerUnit MONEY NOT NULL
+);
+
+DROP TABLE IF EXISTS Supply;
+CREATE TABLE Supply
+(
+     OrderID INT NOT NULL PRIMARY KEY,
+     IngredientCode INT NOT NULL REFERENCES Ingredient(IngredientCode),
+     Description VARCHAR(50) NOT NULL,
+     OrderDate DATE NOT NULL,
+     OrderTime TIME NOT NULL,
+     QuantityOrdered INT NOT NULL,
+     SupplyUnit VARCHAR(4) NOT NULL,
+     UnitPrice MONEY NOT NULL,
+     OrderedTo VARCHAR(25) NOT NULL,
+     OrderedBy VARCHAR(25) NOT NULL
+);
+
+
