@@ -21,9 +21,9 @@
     <table>
 	<tr>
 		<th></th>
+		<th>Quantity</th>
 		<th>Add</th>
 		<th>Remove</th>
-		<th>Quantity</th>
 		<th>On Hand</th>
 	</tr>
 	<tr>
@@ -40,9 +40,9 @@
     <table>
 	<tr>
 		<th></th>
+		<th>Quantity</th>
 		<th>Add</th>
 		<th>Remove</th>
-		<th>Quantity</th>
 		<th>On Hand</th>
 	</tr>
 	<tr>
@@ -59,9 +59,9 @@
     <table>
 	<tr>
 		<th></th>
+		<th>Quantity</th>
 		<th>Add</th>
 		<th>Remove</th>
-		<th>Quantity</th>
 		<th>On Hand</th>
 	</tr>
 	<tr>
@@ -84,9 +84,9 @@
     <table>
 	<tr>
 		<th></th>
+		<th>Quantity</th>
 		<th>Add</th>
 		<th>Remove</th>
-		<th>Quantity</th>
 		<th>On Hand</th>
 	</tr>
 	<tr>
@@ -101,9 +101,9 @@
     <table>
 	<tr>
 		<th></th>
+		<th>Quantity</th>
 		<th>Add</th>
 		<th>Remove</th>
-		<th>Quantity</th>
 		<th>On Hand</th>
 	</tr>
 	<tr>
@@ -121,9 +121,9 @@
     <table>
 	<tr>
 		<th></th>
+		<th>Quantity</th>
 		<th>Add</th>
 		<th>Remove</th>
-		<th>Quantity</th>
 		<th>On Hand</th>
 	</tr>
 	<tr>
@@ -138,9 +138,9 @@
     <table>
 	<tr>
 		<th></th>
+		<th>Quantity</th>
 		<th>Add</th>
 		<th>Remove</th>
-		<th>Quantity</th>
 		<th>On Hand</th>
 	</tr>
 	<tr>
@@ -162,9 +162,9 @@
     <table>
 	<tr>
 		<th></th>
+		<th>Quantity</th>
 		<th>Add</th>
 		<th>Remove</th>
-		<th>Quantity</th>
 		<th>On Hand</th>
 	</tr>
 	<tr>
