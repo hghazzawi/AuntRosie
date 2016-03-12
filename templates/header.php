@@ -21,6 +21,17 @@
       <script type="text/javascript" src="js/jquery-ui.min.js"></script>
       <script type="text/javascript" src="js/modernizr.js"></script>
       <script type="text/javascript" src="js/responsee.js"></script>
+	  
+	  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  
+    <script>
+  $(function() {
+    $( "#tabs" ).tabs();
+  });
+  </script>
+		  
       <!--[if lt IE 9]>
 	      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
         <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>

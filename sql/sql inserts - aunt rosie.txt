@@ -74,9 +74,9 @@ INSERT INTO ingredient (IngredientCode, IngredientName, Cost) VALUES (14, 'Veget
 
 
 
-INSERT INTO inventory (InventoryID, IngredientCode, Description, QuantityInStock, InventoryUnit, CostPerUnit) VALUES (1, 1, 'Inventory table description', 5, 'Pies', '5.99');
+INSERT INTO inventory (InventoryID, IngredientCode, Description, QuantityInStock, InventoryUnit, CostPerUnit) VALUES (1, 2, 'Inventory table description', 5, 'Pies', '5.99');
 
 
-INSERT INTO supply (OrderID, IngredientCode, Description, OrderDate, OrderTime, QuantityOrdered, SupplyUnit, UnitPrice, OrderedTo, OrderedBy) VALUES (1, 1, 'sample supply table description', '2015-08-05', '04:06:13', 2, 1, '3', 'Whitby', 'Juan');
+INSERT INTO supply (OrderID, IngredientCode, Description, OrderDate, OrderTime, QuantityOrdered, SupplyUnit, UnitPrice, OrderedTo, OrderedBy) VALUES (1, 2, 'sample supply table description', '2015-08-05', '04:06:13', 2, 1, '3', 'Whitby', 'Juan');
 
 
