@@ -9,3 +9,5 @@ foreach($product_data as $this_product)
 }
 echo '</div>';
 include("templates/footer.php");
+
+?>

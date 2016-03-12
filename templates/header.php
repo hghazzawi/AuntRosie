@@ -38,11 +38,11 @@
                   <div class="top-nav s-12 l-10 right">
                      <p class="nav-text">Custom menu text</p>
                      <ul class="right">
-                        <li><a>Home</a></li>
-                        <li><a>Login</a></li>
-                        <li><a>About</a></li>
-						 <li><a>Products</a></li>
-                        <li><a>Newsletter</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="employee-login.php">Login</a></li>
+                        <li><a href="about.php">About</a></li>
+						 <li><a href="products.php">Products</a></li>
+                        <li><a href="news.php">Newsletter</a></li>
                         <li><a>Upcoming events</a></li>
                         <li><a>Cart</a></li>
                      </ul>
