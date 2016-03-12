@@ -1,6 +1,6 @@
 <?php $title="Ingredient Inventory"; include("templates/header.php"); ?>
-
-
+<br>
+<div style="width: 1000px ;margin-left: auto ;margin-right: auto ;">
 <div id="tabs">
   <ul>
     <li><a href="#tabs-1">Add New Order</a></li>
@@ -192,6 +192,8 @@
   </fieldset>
 </form>
   </div>
+</div>
+
 </div>
 
 <?php include("templates/footer.php"); ?>
