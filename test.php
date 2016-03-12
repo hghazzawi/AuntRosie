@@ -1,1 +1,0 @@
-<?php $title="Products"; include("templates/header.php");
