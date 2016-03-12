@@ -1,4 +1,4 @@
-<?php include_once "constants.php"; include_once "db.php"; ?>
+<?php include_once("constants.php"); include_once ("db.php"); ?>
 <!DOCTYPE html>
 <!--
 	Author : Hasan Ghazzawi, Justin Estaris , Alex Plant , Rob Budd ,Timothy Perry )

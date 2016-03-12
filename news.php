@@ -1,7 +1,4 @@
-<?php
-$title="Newsletter"
-include("templates/header.php")
-?>
+<?php $title="NewsLetter"; include("templates/header.php"); ?>
 
 <p>Sign up to our newsletter and get </p>
 <ul>
@@ -25,6 +22,4 @@ include("templates/header.php")
 	<input type="submit" value="Subscribe" />
 </form>
 
-<?php 
-include("templates/footer.php")
-?>
+<?php include("templates/footer.php"); ?>
