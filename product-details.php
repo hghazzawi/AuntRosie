@@ -42,7 +42,7 @@
 	  
 	  <div  id="tabs-2">
 	  
-			<button onclick="printContent('nutrionLabel')">Print Content</button>
+			<button onclick="printContent('nutrionLabel')">Print Nutritional Label</button>
 			
 			<div id="nutrionLabel">
 			
@@ -259,15 +259,19 @@
 	  </div>
 	  
 	  <div id="tabs-3">
-			 <ul id="ingredients">
-				 <li>250g plain flour</li>
-				 <li>140g cold unsalted butter</li>
-				 <li>1 large egg yolk</li>
-				 <li>1 small egg whisked with 1 tbsp milk</li>
-				 <li>1kg trimmed British top rump beef</li>
-				 <li>1 ox kidney, about 400g/14oz</li>
-				 <li>250g flat mushrooms</li>
-			</ul>
+		     <button onclick="printContent('ingredients-list')">Print Ingredients List</button>
+			 <div id="ingredients-list">
+				 <ul id="ingredients">
+					 <li>250g plain flour</li>
+					 <li>140g cold unsalted butter</li>
+					 <li>1 large egg yolk</li>
+					 <li>1 small egg whisked with 1 tbsp milk</li>
+					 <li>1kg trimmed British top rump beef</li>
+					 <li>1 ox kidney, about 400g/14oz</li>
+					 <li>250g flat mushrooms</li>
+				 </ul>
+			 </div>
+			
 	  </div>
 	</div>
 </div>
