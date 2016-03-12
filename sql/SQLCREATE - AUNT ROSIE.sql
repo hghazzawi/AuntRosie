@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS VenueLocation;
+DROP TABLE IF EXISTS VenueLocation CASCADE;
 CREATE TABLE VenueLocation
 (
      VenueCode INT NOT NULL PRIMARY KEY,
@@ -10,7 +10,7 @@ CREATE TABLE VenueLocation
      VenueUtilityCost MONEY NOT NULL
 );
 
-DROP TABLE IF EXISTS UserInformation;
+DROP TABLE IF EXISTS UserInformation CASCADE;
 CREATE TABLE UserInformation
 (
      EmployeeCode INT NOT NULL PRIMARY KEY,
@@ -26,7 +26,7 @@ CREATE TABLE UserInformation
      LastLoginTime TIME
 );
 
-DROP TABLE IF EXISTS Main;
+DROP TABLE IF EXISTS Main CASCADE;
 CREATE TABLE Main
 (
      ProductCode INT NOT NULL PRIMARY KEY,
@@ -48,10 +48,10 @@ CREATE TABLE Main
      Carbohydrates INT NOT NULL,
      DietaryFiber INT NOT NULL,
      Sugar INT NOT NULL,
-     Protein INT NOT NULL 
+     Protein INT NOT NULL
 );
 
-DROP TABLE IF EXISTS Transactions;
+DROP TABLE IF EXISTS Transactions CASCADE;
 CREATE TABLE Transactions
 (
      TransactionID INT NOT NULL PRIMARY KEY,
@@ -66,7 +66,7 @@ CREATE TABLE Transactions
 
 
 
-DROP TABLE IF EXISTS TransactionLine;
+DROP TABLE IF EXISTS TransactionLine CASCADE;
 CREATE TABLE TransactionLine
 (
      LineID INT NOT NULL PRIMARY KEY,
@@ -74,7 +74,7 @@ CREATE TABLE TransactionLine
      ProductCode INT NOT NULL REFERENCES Main(ProductCode)
 );
 
-DROP TABLE IF EXISTS Ingredient;
+DROP TABLE IF EXISTS Ingredient CASCADE;
 CREATE TABLE Ingredient
 (
      IngredientCode INT NOT NULL PRIMARY KEY,
@@ -82,7 +82,7 @@ CREATE TABLE Ingredient
      Cost MONEY NOT NULL
 );
 
-DROP TABLE IF EXISTS MainIngredientList;
+DROP TABLE IF EXISTS MainIngredientList CASCADE;
 CREATE TABLE MainIngredientList
 (
      IngredientListCode INT NOT NULL PRIMARY KEY,
@@ -96,7 +96,7 @@ CREATE TABLE MainIngredientList
 
 
 
-DROP TABLE IF EXISTS Inventory;
+DROP TABLE IF EXISTS Inventory CASCADE;
 CREATE TABLE Inventory
 (
      InventoryID INT NOT NULL PRIMARY KEY,
@@ -107,7 +107,7 @@ CREATE TABLE Inventory
      CostPerUnit MONEY NOT NULL
 );
 
-DROP TABLE IF EXISTS Supply;
+DROP TABLE IF EXISTS Supply CASCADE;
 CREATE TABLE Supply
 (
      OrderID INT NOT NULL PRIMARY KEY,
@@ -121,5 +121,3 @@ CREATE TABLE Supply
      OrderedTo VARCHAR(25) NOT NULL,
      OrderedBy VARCHAR(25) NOT NULL
 );
-
-
