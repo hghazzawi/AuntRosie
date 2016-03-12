@@ -8,6 +8,10 @@ foreach($product_data as $this_product)
   //could use: groupcode, producttype, productimagesmall
 }
 echo '</div>';
-include("templates/footer.php");
+
 
 ?>
+
+<a href="product-details.php">Product Details</a>
+
+<?php include("templates/footer.php"); ?>
