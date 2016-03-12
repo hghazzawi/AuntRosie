@@ -42,8 +42,9 @@
 	  
 	  <div  id="tabs-2">
 	  
-			<button onclick="printContent('tabs-2')">Print Content</button>
+			<button onclick="printContent('nutrionLabel')">Print Content</button>
 			
+			<div id="nutrionLabel">
 			
 			  <header class="performance-facts__header">
 				<h1 class="performance-facts__title"></h1>
@@ -249,7 +250,8 @@
 				&bull;
 				Protein 4
 			  </p>
-			  
+			
+		</div>
 			  <br>
 			  
 
