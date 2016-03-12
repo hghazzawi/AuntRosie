@@ -11,7 +11,10 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title><?php echo $title ?></title>
       <link rel="stylesheet" href="css/components.css">
+	  <link rel="stylesheet" href="css/product-grid.css">
       <link rel="stylesheet" href="css/responsee.css">
+	  <link rel="stylesheet" href="css/ingredients.css">
+	  <link rel="stylesheet" href="css/nutrition.css">
       <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
       <link rel="stylesheet" href="owl-carousel/owl.theme.css">
       <!-- CUSTOM STYLE -->
@@ -32,6 +35,15 @@
   $(function() {
     $( "#tabs" ).tabs();
   });
+  
+  
+		function printContent(el){
+			var restorepage = document.body.innerHTML;
+			var printcontent = document.getElementById(el).innerHTML;
+			document.body.innerHTML = printcontent;
+			window.print();
+			document.body.innerHTML = restorepage;
+		}
   </script>
 		  
       <!--[if lt IE 9]>
