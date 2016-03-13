@@ -58,7 +58,7 @@
             <nav>
                <div class="line">
                   <div class="s-12 l-2">
-                     <a href="index.php"><img  style="background-color:#000000" class="s-5 l-12 center" src="img/logo.png"/></a>
+                     <a href="index.php"><img  class="s-5 l-12 center" src="img/logo.png"/></a>
                   </div>
                   <div class="top-nav s-12 l-10 right">
                      <p class="nav-text"></p>
