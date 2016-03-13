@@ -29,7 +29,7 @@
 	<tr>
 		<td><label for="ingredient">Lemon</label></td>
         <td><input id="amount" name="amount" value="1"/></td>
-		<td><input type="image" src="img\controls\More.png" alt="add ingredient" /></td>
+		<td><input type="image" src=".\img\controls\More.png"" alt="add ingredient" /></td>
 		<td><input type="image" src="img\controls\Less.png" alt="remove ingredient" /></td>
 		<td><label for="punchstrength">[quantity]</label></td>
     </tr>
