@@ -3,6 +3,7 @@
 
 
 
+<<<<<<< HEAD
 if (!$connection) {
   echo "An error occurred.\n";
   exit;
@@ -19,6 +20,8 @@ if (!$result) {
 
 
 
+=======
+>>>>>>> 4d00a4bbd3237fadd074d0f9b7db29aaa694e838
 ?>
 
 	<br>
