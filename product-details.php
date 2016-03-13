@@ -4,23 +4,48 @@
 	
 	<p>
 	
+	<div style="float:left;padding-right:20px;" id="productThumbnail">
+		<img src="img/pies/pie.jpg" width="100px" /><br>
+	</div>
 	
-	
-	
-	<img style="display: inline-block;
 		
-		margin: 0px 15px 15px 0px;
-    	padding: 10px;
-    	margin: 0 0 2.5% 2.5%;
-    	background: #fff;
-    	border: 1px solid #ddd;
-    	font-size: 16px;
-    	font-size: 1rem;
-    	vertical-align: top;
-    	box-shadow: 0 0 5px #ddd;
-    	box-sizing: border-box;
-    	-moz-box-sizing: border-box;
-    	-webkit-box-sizing: border-box;" src="img/pies/pie.jpg" width="100" />
+	<div id="productDesc">
+		<h3>Pie Title  $9.99</h3>
+		<hr style="border: 0; height: 0; 
+		   border-top: 1px solid rgba(0, 0, 0, 0.1); 
+		   border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
+		   
+		<br>   
+		
+		<h3>Description</h3>
+		<p style="font-size:14pt">For the best in homemade meat pies and preserves the 
+		exacting and demanding foodie need look no further than Aunt Rosie. 
+		Since the early 80’s, Rosie has been making and selling her fare 
+
+		
+		</p>
+
+				<br>
+				
+		
+		<p style="font-size:14pt;font-weight:bold;font-family:Roboto">Quantity</p><input size="2" type="text" value="1" /><br>
+		<br>
+		
+		<p style="font-size:14pt;font-weight:bold;font-family:Roboto">Venue:<br><select >
+					<option>Whitby - March 12 </option>
+					<option>Oshawa - February 4</option>
+		</select></p>
+		<br>
+		<button class="styled-button">Add to Cart</button>
+		
+	</div>
+	
+	
+	
+		
+
+	
+	
 	
 	
 	
@@ -29,21 +54,19 @@
 	
 	</p>
 
+	
+	
 	<div id="tabs">
 	
 	  <ul>
-		<li><a href="#tabs-1">Description</a></li>
 		<li><a href="#tabs-2">Nutritional Information</a></li>
 		<li><a href="#tabs-3">Ingredients list</a></li>
 	  </ul>
-	  <div id="tabs-1">
-			
-	  </div>
-	  
+
 	  
 	  <div  id="tabs-2">
 	  
-			<button onclick="printContent('nutrionLabel')">Print Nutritional Label</button>
+			<button  class="styled-button" onclick="printContent('nutrionLabel')">Print Nutritional Label</button>
 			
 			<div id="nutrionLabel">
 			
@@ -260,7 +283,7 @@
 	  </div>
 	  
 	  <div id="tabs-3">
-		     <button onclick="printContent('ingredients-list')">Print Ingredients List</button>
+		     <button class="styled-button" onclick="printContent('ingredients-list')">Print Ingredients List</button>
 			 <div id="ingredients-list">
 				 <ul id="ingredients">
 					 <li>250g plain flour</li>
@@ -289,35 +312,37 @@
 <div>
 	<br>
 	<h3 style="text-align: center" >Related Items</h3><br>
-	<ul class="rig columns-3">
-    	
-    	<a href="product-details.php">
-			<li>
-				<img src="img/pies/pie.jpg" />
-				<h3 style="text-align: center">Best PIE</h3>
-				
-				 
-			</li>
-		</a>
-		<a href="product-details.php">
-			<li>
-				<img src="img/pies/pie.jpg" />
-				<h3 style="text-align: center">Best PIE</h3>
-				
-				 
-			</li>
-		</a>
-		<a href="product-details.php">
-			<li>
-				<img src="img/pies/pie.jpg" />
-				<h3 style="text-align: center">Best PIE</h3>
-				
-				 
-			</li>
-		</a>
-		
-    	
-    </ul>
+	<div style="margin-left: auto ;margin-right: auto ;width:800px">
+		<ul class="rig columns-3">
+			<a href="product-details.php">
+				<li>
+					<img src="img/pies/pie.jpg" />
+					<h3 style="text-align: center">Best PIE</h3>
+					
+					
+				</li>
+			</a>
+			
+			<a href="product-details.php">
+				<li>
+					<img src="img/pies/pie.jpg" />
+					<h3 style="text-align: center">Best PIE</h3>
+					
+					 
+				</li>
+			</a>
+			<a href="product-details.php">
+				<li>
+					<img src="img/pies/pie.jpg" />
+					<h3 style="text-align: center">Best PIE</h3>
+					
+					 
+				</li>
+			</a>
+			
+			
+		</ul>
+	</div>
 </div>
 	
 	

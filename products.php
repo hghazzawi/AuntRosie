@@ -15,37 +15,43 @@ echo '</div>';
 	<br>
 
 
-    <ul class="rig columns-4">
-    	<li>
-    		<img src="img/pies/pie.jpg" />
-    		<h3>Best PIE</h3>
-
-    		
-			<a href="product-details.php"><button>View Details</button></a>
-
-
+    <div style="margin-left: auto ;margin-right: auto ;width:1500px">
+		<ul class="rig columns-4">
+			<a href="product-details.php">
+				<li>
+					<img src="img/pies/pie.jpg" />
+					<h3 style="text-align: center">Best PIE</h3>
+					
+					
+				</li>
+			</a>
+			<a href="product-details.php">
+				<li>
+					<img src="img/pies/pie.jpg" />
+					<h3 style="text-align: center">Best PIE</h3>
+					
+					
+				</li>
+			</a>
+			<a href="product-details.php">
+				<li>
+					<img src="img/pies/pie.jpg" />
+					<h3 style="text-align: center">Best PIE</h3>
+					
+					 
+				</li>
+			</a>
+			<a href="product-details.php">
+				<li>
+					<img src="img/pies/pie.jpg" />
+					<h3 style="text-align: center">Best PIE</h3>
+					
+					 
+				</li>
+			</a>
 			
-
-    	</li>
-    	<li>
-    		<img src="img/pies/pie.jpg" />
-    		<h3>Best PIE</h3>
-    		
-			<a href="product-details.php"><button>View Details</button></a>
-    	</li>
-		<li>
-    		<img src="img/pies/pie.jpg" />
-    		<h3>Best PIE</h3>
-    		
-			<a href="product-details.php"><button>View Details</button></a>
-    	</li>
-		<li>
-    		<img src="img/pies/pie.jpg" />
-    		<h3>Best PIE</h3>
-    		
-			<a href="product-details.php"><button>View Details</button></a>
-    	</li>
-
-    </ul>
+			
+		</ul>
+	</div>
 
 <?php include("templates/footer.php"); ?>

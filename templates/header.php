@@ -44,6 +44,12 @@
 			window.print();
 			document.body.innerHTML = restorepage;
 		}
+		
+		
+		function displayConfirmation(){
+			document.getElementById('confirmationMessage').innerHTML="Thank you for subscribing";
+			
+		}
   </script>
 		  
       <!--[if lt IE 9]>

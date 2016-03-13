@@ -5,7 +5,7 @@ include("templates/header.php"); ?>
 <br>
 
 <div  id="banner">
-	<img style="margin-left: auto ;margin-right: auto ;" src="img/banner.png"/>
+	<a href="products.php"><img style="margin-left: auto ;margin-right: auto ;" src="img/banner.png"/></a>
 </div>
 
 <br>
