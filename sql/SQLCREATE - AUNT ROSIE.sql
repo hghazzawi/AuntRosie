@@ -106,7 +106,7 @@ DROP TABLE IF EXISTS MainIngredientList CASCADE;
 CREATE TABLE MainIngredientList
 (
      IngredientListCode INT NOT NULL PRIMARY KEY,
-     IngredientCode INT NOT NULL REFERENCES Ingredient(IngredientCode),
+     IngredientCode INT NOT NULL REFERENCES IngredientInventory(IngredientCode),
      ProductCode INT NOT NULL REFERENCES Main(ProductCode),
      Description VARCHAR(50) NOT NULL,
      IngredientQuantity INT NOT NULL,
@@ -120,7 +120,7 @@ DROP TABLE IF EXISTS Supply CASCADE;
 CREATE TABLE Supply
 (
      OrderID INT NOT NULL PRIMARY KEY,
-     IngredientCode INT NOT NULL REFERENCES Ingredient(IngredientCode),
+     IngredientCode INT NOT NULL REFERENCES IngredientInventory(IngredientCode),
      Description VARCHAR(50) NOT NULL,
      OrderDate DATE NOT NULL,
      OrderTime TIME NOT NULL,
