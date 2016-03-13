@@ -8,4 +8,4 @@ INSERT INTO main VALUES (7, 7, 'Preserve', 'Strawberry Jam', 1, 1, 1, 1, 10, 1, 
 INSERT INTO main VALUES (8, 8, 'Preserve', 'Blackberry Jam', 1, 1, 1, 1, 15, 1, 160, 13, 16, 7, 2, 11, 17, 16, 12, 9);
 INSERT INTO main VALUES (9, 9, 'Preserve', 'Marmalade', 1, 1, 1, 1, 15, 1, 180, 16, 13, 3, 7, 18, 22, 12, 4, 17);
 INSERT INTO main VALUES (10, 10, 'Preserve', 'Peach Butter', 1, 1, 1, 1, 25, 1, 120, 15, 14, 20, 5, 30, 10, 17, 12, 13);
-            
+           
