@@ -114,20 +114,28 @@ INSERT INTO productinventory (ProductCode, AccessoryCode, QuantityOnHand, CostPe
 INSERT INTO productinventory (ProductCode, AccessoryCode, QuantityOnHand, CostPerUnit)VALUES (19, '4', '25', '2.79');
 INSERT INTO productinventory (ProductCode, AccessoryCode, QuantityOnHand, CostPerUnit)VALUES (20, '4', '41', '2.79');
 
-INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit) VALUES (1, 'Flour', '7', '6.99');
-INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit) VALUES (2, 'Baking Soda', '4', '3.99');
-INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit) VALUES (3, 'Salt', '2', '2.49');
-INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit) VALUES (4, 'Sugar', '3', '1.99');
-INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit) VALUES (5, 'Steak', '10', '11.99');
-INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit) VALUES (6, 'Kidney', '10', '4.99');
-INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit) VALUES (7, 'Stout', '8', '13.99');
-INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit) VALUES (8, 'Carrots', '5', '2.99');
-INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit) VALUES (9, 'Potatoes', '10', '3.99');
-INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit) VALUES (10, 'Onion', '7', '3.49');
-INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit) VALUES (11, 'Butter', '22', '2.99');
-INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit) VALUES (12, 'Eggs', '48', '3.29');
-INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit) VALUES (13, 'Mushrooms', '5', '5.49');
-INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit) VALUES (14, 'Vegetable Oil', '3', '4.49');
+INSERT INTO categories (CategoryID, Description)  VALUES (1, 'Meat');
+INSERT INTO categories (CategoryID, Description)  VALUES (2, 'Fruit');
+INSERT INTO categories (CategoryID, Description)  VALUES (3, 'Vegetables');
+INSERT INTO categories (CategoryID, Description)  VALUES (4, 'Other');
+
+
+INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit, CategoryID) VALUES (1, 'Flour', '7', '6.99', '4');
+INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit, CategoryID) VALUES (2, 'Baking Soda', '4', '3.99', '4');
+INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit, CategoryID) VALUES (3, 'Salt', '2', '2.49', '4');
+INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit, CategoryID) VALUES (4, 'Sugar', '3', '1.99', '4');
+INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit, CategoryID) VALUES (5, 'Steak', '10', '11.99', '1');
+INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit, CategoryID) VALUES (6, 'Kidney', '10', '4.99', '1');
+INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit, CategoryID) VALUES (7, 'Stout', '8', '13.99', '4');
+INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit, CategoryID) VALUES (8, 'Carrots', '5', '2.99', '3');
+INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit, CategoryID) VALUES (9, 'Potatoes', '10', '3.99', '3');
+INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit, CategoryID) VALUES (10, 'Onion', '7', '3.49', '3');
+INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit, CategoryID) VALUES (11, 'Butter', '22', '2.99', '4');
+INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit, CategoryID) VALUES (12, 'Eggs', '48', '3.29', '4');
+INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit, CategoryID) VALUES (13, 'Mushrooms', '5', '5.49', '3');
+INSERT INTO ingredientinventory (IngredientCode, IngredientName, QuantityOnHand, CostPerUnit, CategoryID) VALUES (14, 'Vegetable Oil', '3', '4.49', '4');
+
+
 
 INSERT INTO supply (OrderID, IngredientCode, Description, OrderDate, OrderTime, QuantityOrdered, SupplyUnit, UnitPrice, OrderedTo, OrderedBy) VALUES (1, 1, 'sample supply table description', '2015-08-05', '04:06:13', 2, 1, '3', 'Whitby', 'Juan');
 
