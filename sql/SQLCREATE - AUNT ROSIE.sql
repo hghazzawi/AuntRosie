@@ -74,6 +74,13 @@ CREATE TABLE TransactionLine
      ProductCode INT NOT NULL REFERENCES Main(ProductCode)
 );
 
+DROP TABLE IF EXISTS Categories CASCADE;
+CREATE TABLE Categories
+(
+     CategoryID INT NOT NULL PRIMARY KEY,
+     Description VARCHAR(50) NOT NULL
+);
+
 DROP TABLE IF EXISTS IngredientInventory CASCADE;
 CREATE TABLE IngredientInventory
 (
@@ -81,6 +88,7 @@ CREATE TABLE IngredientInventory
      IngredientName VARCHAR(50) NOT NULL,
 	 QuantityOnHand INT NOT NULL,
      CostPerUnit MONEY NOT NULL
+	 CategoryID INT NOT NULL REFERENCES Categories(CategoryID),
 );
 
 DROP TABLE IF EXISTS Accessories CASCADE;
