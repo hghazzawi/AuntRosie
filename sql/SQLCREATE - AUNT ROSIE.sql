@@ -74,13 +74,42 @@ CREATE TABLE TransactionLine
      ProductCode INT NOT NULL REFERENCES Main(ProductCode)
 );
 
-DROP TABLE IF EXISTS Ingredient CASCADE;
+DROP TABLE IF EXISTS IngredientInventory CASCADE;
+CREATE TABLE IngredientInventory
+(
+     IngredientCode INT NOT NULL PRIMARY KEY,
+     IngredientName VARCHAR(50) NOT NULL,
+	 QuantityOnHand INT NOT NULL,
+     CostPerUnit MONEY NOT NULL
+);
+
+DROP TABLE IF EXISTS Accessories CASCADE;
+CREATE TABLE Accessories
+(
+     AccessoryCode INT NOT NULL PRIMARY KEY,
+     Name VARCHAR(50) NOT NULL,
+	 QuantityOnHand INT NOT NULL,
+     CostPerUnit MONEY NOT NULL
+);
+
+DROP TABLE IF EXISTS ProductInventory CASCADE;
+CREATE TABLE ProductInventory
+(
+     ProductCode INT NOT NULL PRIMARY KEY REFERENCES Main(ProductCode),
+     AccessoryCode INT NOT NULL REFERENCES Accessories(AccessoryCode),
+	 QuantityOnHand INT NOT NULL,
+     CostPerUnit MONEY NOT NULL
+);
+
+DROP TABLE IF EXISTS IngredientInventory CASCADE;
 CREATE TABLE Ingredient
 (
      IngredientCode INT NOT NULL PRIMARY KEY,
      IngredientName VARCHAR(50) NOT NULL,
-     Cost MONEY NOT NULL
+	 QuantityOnHand INT NOT NULL,
+     CostPerUnit MONEY NOT NULL
 );
+
 
 DROP TABLE IF EXISTS MainIngredientList CASCADE;
 CREATE TABLE MainIngredientList
