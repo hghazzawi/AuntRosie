@@ -58,10 +58,10 @@
             <nav>
                <div class="line">
                   <div class="s-12 l-2">
-                     <img class="s-5 l-12 center"src="img/logo.png">
+                     <a href="index.php"><img  class="s-5 l-12 center"src="img/logo.png"/></a>
                   </div>
                   <div class="top-nav s-12 l-10 right">
-                     <p class="nav-text">Custom menu text</p>
+                     <p class="nav-text"></p>
                      <ul class="right">
                         <li><a href="index.php">Home</a></li>
                         <li><a href="employee-login.php">Login</a></li>

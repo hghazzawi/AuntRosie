@@ -20,23 +20,27 @@ echo '</div>';
     		<img src="img/pies/pie.jpg" />
     		<h3>Best PIE</h3>
     		
-			<button href="product-details.php">View Details</button>
+			<a href="product-details.php"><button>View Details</button></a>
     	</li>
     	<li>
     		<img src="img/pies/pie.jpg" />
     		<h3>Best PIE</h3>
-    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+    		
+			<a href="product-details.php"><button>View Details</button></a>
     	</li>
-    	<li>
+		<li>
     		<img src="img/pies/pie.jpg" />
     		<h3>Best PIE</h3>
-    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+    		
+			<a href="product-details.php"><button>View Details</button></a>
     	</li>
-    	<li>
+		<li>
     		<img src="img/pies/pie.jpg" />
     		<h3>Best PIE</h3>
-    		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+    		
+			<a href="product-details.php"><button>View Details</button></a>
     	</li>
+		
     	
     </ul>
 
