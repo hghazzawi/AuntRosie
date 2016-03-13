@@ -11,4 +11,15 @@ function db_connect()
 $connection = db_connect();
 
 //SELECTSs
-pg_prepare($connection, "get_all_products", 'SELECT ProductCode, GroupCode, ProductType, ProductName, ProductImageSmall FROM '.PRODUCT_TABLE);
+//pg_prepare($connection, "get_all_products", 'SELECT ProductCode, GroupCode, ProductType, ProductName, ProductImageSmall FROM main');
+
+
+
+function dump($arg)
+{
+	 echo "<pre>";
+	 print_r($arg);
+	 echo "</pre>";
+}
+ 
+ 
