@@ -1,6 +1,7 @@
 <?php $title="Ingredient Inventory"; include("templates/header.php"); ?>
 <br>
-<div style="width: 1000px ;margin-left: auto ;margin-right: auto ;">
+<?php $result = pg_query($conn, "SELECT author, email FROM authors");?>
+<div style="width: 1100px ;margin-left: auto ;margin-right: auto ;">
 <div id="tabs">
   <ul>
     <li><a href="#tab-order">Add New Order</a></li>
