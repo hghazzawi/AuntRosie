@@ -42,7 +42,7 @@
     ul.rig.columns-4 li {
     	width: 22.5%; /* this value + 2.5 should = 25% */
     }
-     
+
     @media (max-width: 480px) {
     	ul.grid-nav li {
     		display: block;
@@ -58,4 +58,28 @@
     		width: 100% !important; /* over-ride all li styles */
     		margin: 0 0 20px;
     	}
+    }
+
+
+    div#product_listing>a
+    {
+      display: inline-block;
+      height: 200px;
+      width: 300px;
+      vertical-align: top;
+    }
+
+    div#product_listing img
+    {
+      margin-left: auto;
+      margin-right: auto;
+      /*height: 90px;*/
+      width: 275px;
+    }
+
+
+    div#product_listing span
+    {
+      font-size: 15pt;
+      font-weight: bold;
     }
