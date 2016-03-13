@@ -101,15 +101,6 @@ CREATE TABLE ProductInventory
      CostPerUnit MONEY NOT NULL
 );
 
-DROP TABLE IF EXISTS IngredientInventory CASCADE;
-CREATE TABLE Ingredient
-(
-     IngredientCode INT NOT NULL PRIMARY KEY,
-     IngredientName VARCHAR(50) NOT NULL,
-	 QuantityOnHand INT NOT NULL,
-     CostPerUnit MONEY NOT NULL
-);
-
 
 DROP TABLE IF EXISTS MainIngredientList CASCADE;
 CREATE TABLE MainIngredientList
@@ -124,17 +115,6 @@ CREATE TABLE MainIngredientList
 );
 
 
-
-DROP TABLE IF EXISTS Inventory CASCADE;
-CREATE TABLE Inventory
-(
-     InventoryID INT NOT NULL PRIMARY KEY,
-     IngredientCode INT NOT NULL REFERENCES Ingredient(IngredientCode),
-     Description VARCHAR(50) NOT NULL,
-     QuantityInStock INT NOT NULL,
-     InventoryUnit VARCHAR(4) NOT NULL,
-     CostPerUnit MONEY NOT NULL
-);
 
 DROP TABLE IF EXISTS Supply CASCADE;
 CREATE TABLE Supply
