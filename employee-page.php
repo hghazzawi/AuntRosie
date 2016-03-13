@@ -23,18 +23,30 @@
 	<tr>
 		<td><label for="ingredient">Steak and Stout</label></td>
         <td><input id="amount" name="amount" value="1"/></td>
+		<td><select>
+			<option value="large">1kg</option>
+			<option value="small">500g</option>
+		</select></td>
 		<td><input type="image" src="img\controls\More.png" alt="add ingredient" /></td>
 		<td><input type="image" src="img\controls\Less.png" alt="remove ingredient" /></td>
     </tr>
 	<tr>
 		<td><label for="ingredient">Steak and Kidney</label></td>
         <td><input id="amount" name="amount" value="1"/></td>
+		<td><select>
+			<option value="large">1kg</option>
+			<option value="small">500g</option>
+		</select></td>
 		<td><input type="image" src="img\controls\More.png" alt="add ingredient" /></td>
 		<td><input type="image" src="img\controls\Less.png" alt="remove ingredient" /></td>
     </tr>
 	<tr>
 		<td><label for="ingredient">Ox Liver</label></td>
         <td><input id="amount" name="amount" value="1"/></td>
+		<td><select>
+			<option value="large">1kg</option>
+			<option value="small">500g</option>
+		</select></td>
 		<td><input type="image" src="img\controls\More.png" alt="add ingredient" /></td>
 		<td><input type="image" src="img\controls\Less.png" alt="remove ingredient" /></td>
     </tr>
@@ -46,6 +58,10 @@
 	<tr>
 		<td><label for="ingredient">Horseradish</label></td>
         <td><input id="amount" name="amount" value="1"/></td>
+		<td><select>
+			<option value="large">500g</option>
+			<option value="small">250g</option>
+		</select></td>
 		<td><input type="image" src="img\controls\More.png" alt="add ingredient" /></td>
 		<td><input type="image" src="img\controls\Less.png" alt="remove ingredient" /></td>
 		
@@ -53,6 +69,10 @@
 	<tr>
 		<td><label for="ingredient">Strawberry Jelly</label></td>
         <td><input id="amount" name="amount" value="1"/></td>
+		<td><select>
+			<option value="large">500g</option>
+			<option value="small">250g</option>
+		</select></td>
 		<td><input type="image" src="img\controls\More.png" alt="add ingredient" /></td>
 		<td><input type="image" src="img\controls\Less.png" alt="remove ingredient" /></td>
 		
@@ -60,6 +80,10 @@
 	<tr>
 		<td><label for="ingredient">Apple Butter</label></td>
         <td><input id="amount" name="amount" value="1"/></td>
+		<td><select>
+			<option value="large">500g</option>
+			<option value="small">250g</option>
+		</select></td>
 		<td><input type="image" src="img\controls\More.png" alt="add ingredient" /></td>
 		<td><input type="image" src="img\controls\Less.png" alt="remove ingredient" /></td>
 		
