@@ -36,7 +36,7 @@
 					<option>Oshawa - February 4</option>
 		</select></p>
 		<br>
-		<button class="styled-button">Add to Cart</button>
+		<a href=""><button class="styled-button">Add to Cart</button></a>
 		
 	</div>
 	
