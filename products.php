@@ -1,13 +1,16 @@
 <?php $title="Products"; include("templates/header.php");
 
-$product_data = pg_fetch_all(pg_execute($connection, "get_all_products", Array()));
-echo '<div id="product_listing">';
-foreach($product_data as $this_product)
-{
-  echo '<a href="product_details.php?id='.$this_product['productcode'].'"><img src="'.$this_product['productimgsmall'].'" /><span>'.$this_product['productname'].'</span></a>';
-  //could use: groupcode, producttype,
+
+$result = pg_query($connection, "SELECT ProductCode, GroupCode, ProductType, ProductName, ProductImageSmall FROM main");
+if (!$result) {
+  echo "An error occurred.\n";
+  exit;
 }
-echo '</div>';
+
+while ($row = pg_fetch_row($result)) {
+  echo "Author: $row[0]  E-mail: $row[1]";
+  echo "<br />\n";
+}
 
 
 ?>

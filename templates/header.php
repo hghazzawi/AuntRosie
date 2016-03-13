@@ -1,4 +1,8 @@
-<?php include_once("constants.php"); include_once ("db.php"); ?>
+<?php 
+ini_set('display_startup_errors',1);
+ini_set('display_errors',1);
+error_reporting(-1);
+include_once("constants.php"); include_once ("db.php"); ?>
 <!DOCTYPE html>
 <!--
 	Author : Hasan Ghazzawi, Justin Estaris , Alex Plant , Rob Budd ,Timothy Perry )
