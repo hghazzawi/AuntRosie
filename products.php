@@ -24,7 +24,7 @@ echo '</div>';
 			<a href="product-details.php"><button>View Details</button></a>
 
 
-			<button href="product-details.php">View Details</button>
+			
 
     	</li>
     	<li>
