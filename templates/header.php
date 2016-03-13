@@ -19,7 +19,7 @@
       <link rel="stylesheet" href="owl-carousel/owl.theme.css">
       <!-- CUSTOM STYLE -->
       <link rel="stylesheet" href="css/template-style.css">
-      <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
       <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
       <script type="text/javascript" src="js/jquery-ui.min.js"></script>
       <script type="text/javascript" src="js/modernizr.js"></script>
@@ -58,9 +58,9 @@
             <nav>
                <div class="line">
                   <div class="s-12 l-2">
-                     <a href="index.php"><img  class="s-5 l-12 center" src="img/logo.png"/></a>
+                     <a href="index.php"><img  src="img/logo4.png"/></a>
                   </div>
-                  <div class="top-nav s-12 l-10 right">
+                  <div style="font-weight:bold;font-size:12pt;padding-top: 20px;" class="top-nav s-12 l-10 right">
                      <p class="nav-text"></p>
                      <ul class="right">
                         <li><a href="index.php">Home</a></li>
@@ -68,7 +68,7 @@
                         <li><a href="about.php">About</a></li>
 						 <li><a href="products.php">Products</a></li>
                         <li><a href="news.php">Newsletter</a></li>
-                        <li><a>Upcoming events</a></li>
+                        <li><a>Upcoming Events</a></li>
                         <li><a>Cart</a></li>
                      </ul>
                   </div>

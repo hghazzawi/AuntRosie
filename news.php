@@ -24,7 +24,11 @@
 		<input type="checkbox" name="emailSub" value="Bike">I would like to receive information about Aunt Rosie&#39;s upcoming events<br>
 		<input type="checkbox" name="updates" value="Car">Yes, I would like updates and pie news via email, and I am 16 years or older 
 		<p>By clicking subscribe I agree to the privacy policy</p>
-		<br/><input type="submit" value="Subscribe" /><br/>
+		<br/>
+		<p style="text-align:center">
+		<input style="width: 300px" type="submit" value="Subscribe">
+	   </p>
+		<br/>
 	</form>
 </div>
 

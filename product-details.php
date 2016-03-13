@@ -8,7 +8,7 @@
 	
 	
 	<img style="display: inline-block;
-		float: left; 
+		
 		margin: 0px 15px 15px 0px;
     	padding: 10px;
     	margin: 0 0 2.5% 2.5%;
@@ -30,6 +30,7 @@
 	</p>
 
 	<div id="tabs">
+	
 	  <ul>
 		<li><a href="#tabs-1">Description</a></li>
 		<li><a href="#tabs-2">Nutritional Information</a></li>
@@ -275,7 +276,52 @@
 	  </div>
 	</div>
 </div>
-
+	
+	<br>
+	
+	<hr style="border: 0; height: 0; 
+		   border-top: 1px solid rgba(0, 0, 0, 0.1); 
+		   border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
+		   
+	<br>
+	
+	
+<div>
+	<br>
+	<h3 style="text-align: center" >Related Items</h3><br>
+	<ul class="rig columns-3">
+    	
+    	<a href="product-details.php">
+			<li>
+				<img src="img/pies/pie.jpg" />
+				<h3 style="text-align: center">Best PIE</h3>
+				
+				 
+			</li>
+		</a>
+		<a href="product-details.php">
+			<li>
+				<img src="img/pies/pie.jpg" />
+				<h3 style="text-align: center">Best PIE</h3>
+				
+				 
+			</li>
+		</a>
+		<a href="product-details.php">
+			<li>
+				<img src="img/pies/pie.jpg" />
+				<h3 style="text-align: center">Best PIE</h3>
+				
+				 
+			</li>
+		</a>
+		
+    	
+    </ul>
+</div>
+	
+	
+	
 <br>
 
 
