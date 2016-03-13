@@ -1,7 +1,7 @@
 <?php $title="Homepage"; include("templates/header.php"); ?>
 <br/>
 <div style="width: 700px ;margin-left: auto ;margin-right: auto ;">
-	<form class="customform">
+	<form action="employee-page.php" class="customform">
 	   <h1>Employee Login</h1>
 	   <br/>
 	   <p>Email Address:</p> <input type="email" name="email-address"><br>
