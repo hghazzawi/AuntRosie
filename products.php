@@ -3,22 +3,6 @@
 
 
 
-if (!$connection) {
-  echo "An error occurred.\n";
-  exit;
-}
-
-$result = pg_query($connection, "SELECT ProductCode, GroupCode, ProductType, ProductName, ProductImageSmall FROM Main");
-if (!$result) {
-  echo "An error occurred.\n";
-  exit;
-}
-
- dump($result);
-
-
-
-
 ?>
 
 	<br>
