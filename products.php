@@ -1,16 +1,6 @@
 <?php $title="Products"; include("templates/header.php");
 
 
-$result = pg_query($connection, "SELECT ProductCode, GroupCode, ProductType, ProductName, ProductImageSmall FROM main");
-if (!$result) {
-  echo "An error occurred.\n";
-  exit;
-}
-
-while ($row = pg_fetch_row($result)) {
-  echo "Author: $row[0]  E-mail: $row[1]";
-  echo "<br />\n";
-}
 
 
 ?>

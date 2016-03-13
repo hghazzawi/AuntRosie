@@ -24,10 +24,10 @@
 
 
 	<form  class="customform"  action="#">
-		<p style="font-size:14pt;font-weight:bold;font-family:Roboto">Email:<br><input type="email"/></p>
-		<p style="font-size:14pt;font-weight:bold;font-family:Roboto">First Name :<br> <input type="text" /></p>
-		<p style="font-size:14pt;font-weight:bold;font-family:Roboto">Last Name : <br><input type="text" /></p>
-		<p style="font-size:14pt;font-weight:bold;font-family:Roboto">Gender:<br><select >
+		<p style="font-size:14pt;font-weight:bold;font-family:Roboto">Email:<br><br><input type="email"/></p>
+		<p style="font-size:14pt;font-weight:bold;font-family:Roboto">First Name :<br><br> <input type="text" /></p>
+		<p style="font-size:14pt;font-weight:bold;font-family:Roboto">Last Name : <br><br><input type="text" /></p>
+		<p style="font-size:14pt;font-weight:bold;font-family:Roboto">Gender:<br><br><select >
 					<option>Male</option>
 					<option>Female</option>
 				</select></p>
