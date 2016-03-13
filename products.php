@@ -8,7 +8,7 @@ if (!$connection) {
   exit;
 }
 
-$result = pg_query($connection, "SELECT ProductCode, GroupCode, ProductType, ProductName, ProductImageSmall FROM Main");
+$result = pg_query($connection, 'SELECT * FROM "public"."main"');
 if (!$result) {
   echo "An error occurred.\n";
   exit;
