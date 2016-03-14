@@ -350,7 +350,7 @@
 	
 <div>
 	<br>
-	<h3 style="text-align: center" >Related Items</h3><br>
+	<h3 style="text-align: center" >Suggested Items</h3><br>
 	<div style="margin-left: auto ;margin-right: auto ;width:70%">
 		<ul class="rig columns-3">
 		
