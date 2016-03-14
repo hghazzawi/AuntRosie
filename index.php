@@ -18,40 +18,27 @@ include("templates/header.php"); ?>
 	<br>
 	<h1 style="font-weight:bold;text-align: center">Best Selling Pies</h3><br>
 	
-	<div style="margin-left: auto ;margin-right: auto ;width:1500px">
+	<div style="margin-left: auto ;margin-right: auto ;width:94%">
 		<ul class="rig columns-4">
-			<a href="product-details.php">
-				<li>
-					<img src="img/pies/pie.jpg" />
-					<h3 style="text-align: center">Best PIE</h3>
-					
-					
-				</li>
-			</a>
-			<a href="product-details.php">
-				<li>
-					<img src="img/pies/pie.jpg" />
-					<h3 style="text-align: center">Best PIE</h3>
-					
-					
-				</li>
-			</a>
-			<a href="product-details.php">
-				<li>
-					<img src="img/pies/pie.jpg" />
-					<h3 style="text-align: center">Best PIE</h3>
-					
-					 
-				</li>
-			</a>
-			<a href="product-details.php">
-				<li>
-					<img src="img/pies/pie.jpg" />
-					<h3 style="text-align: center">Best PIE</h3>
-					
-					 
-				</li>
-			</a>
+		
+			<?php 
+			
+				$result = pg_query($connection, "select*from main where producttype='Pie' order by saleamount DESC limit 4");
+				
+				while ($row = pg_fetch_assoc($result)) {			
+					echo "<a href='product-details.php?prod_code=".$row['productcode']."'>
+							<li>
+								<img src='img/pies/pie.jpg' />
+								<h3 style='text-align: center'>".$row['productname']."</h3>
+							</li>
+						</a>
+					";
+				}
+				
+			?>
+			
+		
+			
 			
 			
 		</ul>
@@ -64,40 +51,24 @@ include("templates/header.php"); ?>
 <div>
 	<br>
 	<h1 style="font-weight:bold;text-align: center" >Best Selling Preserves</h3><br>
-	<div style="margin-left: auto ;margin-right: auto ;width:1500px">
+	<div style="margin-left: auto ;margin-right: auto ;width:94%">
 		<ul class="rig columns-4">
-			<a href="product-details.php">
-				<li>
-					<img src="img/pies/pie.jpg" />
-					<h3 style="text-align: center">Best PIE</h3>
-					
-					
-				</li>
-			</a>
-			<a href="product-details.php">
-				<li>
-					<img src="img/pies/pie.jpg" />
-					<h3 style="text-align: center">Best PIE</h3>
-					
-					
-				</li>
-			</a>
-			<a href="product-details.php">
-				<li>
-					<img src="img/pies/pie.jpg" />
-					<h3 style="text-align: center">Best PIE</h3>
-					
-					 
-				</li>
-			</a>
-			<a href="product-details.php">
-				<li>
-					<img src="img/pies/pie.jpg" />
-					<h3 style="text-align: center">Best PIE</h3>
-					
-					 
-				</li>
-			</a>
+			
+			<?php 
+			
+				$result = pg_query($connection, "select*from main where producttype='Preserve' order by saleamount DESC limit 4");
+				
+				while ($row = pg_fetch_assoc($result)) {			
+					echo "<a href='product-details.php?prod_code=".$row['productcode']."'>
+							<li>
+								<img src='img/pies/pie.jpg' />
+								<h3 style='text-align: center'>".$row['productname']."</h3>
+							</li>
+						</a>
+					";
+				}
+				
+			?>
 			
 			
 		</ul>

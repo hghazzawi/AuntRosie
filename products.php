@@ -28,7 +28,7 @@ if (!$result) {
 	<br>
 
 
-    <div style="margin-left: auto ;margin-right: auto ;width:1500px">
+    <div style="margin-left: auto ;margin-right: auto ;width:95%">
 		<ul class="rig columns-4">
 		
 			<?php 
