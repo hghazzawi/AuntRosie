@@ -49,7 +49,7 @@ CREATE TABLE Main
      DietaryFiber INT NOT NULL,
      Sugar INT NOT NULL,
      Protein INT NOT NULL,
-	 Description VARCHAR(255)
+	 Description TEXT
 );
 
 DROP TABLE IF EXISTS Transactions CASCADE;
