@@ -26,7 +26,7 @@ function cur_to_int($input)
 
 
 $transactions = pg_execute($connection, "get_all_transactions", Array());
-echo '<table id="transactions"><tr><th>ID</th><th>Date</th><th>Description</th><th>Expences</th><th>Earnings</th></tr>';
+echo '<table id="transactions" style="margin-left: auto; margin-right: auto; margin-top: 1em; width: initial;"><tr><th>ID</th><th>Date</th><th>Description</th><th>Expenses</th><th>Earnings</th></tr>';
 $count = pg_num_rows($transactions);
 $i = 0;
 $total = 0;
