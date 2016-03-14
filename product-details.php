@@ -38,10 +38,8 @@
 		<br>   
 		
 		<h3>Description</h3>
-		<p style="font-size:14pt">For the best in homemade meat pies and preserves the 
-		exacting and demanding foodie need look no further than Aunt Rosie. 
-		Since the early 80’s, Rosie has been making and selling her fare 
-
+		<p style="font-size:14pt">
+			<?php echo $result_set['description'] ?>
 		
 		</p>
 

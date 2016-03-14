@@ -36,7 +36,7 @@ if (!$result) {
 				while ($row = pg_fetch_assoc($result)) {			
 					echo "<a href='product-details.php?prod_code=".$row['productcode']."'>
 							<li>
-								<img src='img/pies/pie.jpg' />
+								<img src='img/products/".$row['productimagebig']."' />
 								<h3 style='text-align: center'>".$row['productname']."</h3>
 							</li>
 						</a>
