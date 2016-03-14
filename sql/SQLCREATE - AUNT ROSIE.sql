@@ -48,7 +48,8 @@ CREATE TABLE Main
      Carbohydrates INT NOT NULL,
      DietaryFiber INT NOT NULL,
      Sugar INT NOT NULL,
-     Protein INT NOT NULL
+     Protein INT NOT NULL,
+	 Description VARCHAR(255)
 );
 
 DROP TABLE IF EXISTS Transactions CASCADE;
@@ -60,7 +61,10 @@ CREATE TABLE Transactions
      CustomerFirstName VARCHAR(35),
      CustomerLastName VARCHAR(35),
      CustomerEmail VARCHAR(50),
-     CustomerCellphone CHAR(10)
+     CustomerCellphone CHAR(10),
+	 Cost MONEY NOT NULL,
+	 HST MONEY NOT NULL,
+	 Description VARCHAR(155)
 );
 
 
