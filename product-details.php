@@ -69,8 +69,7 @@
 					";
 				}
 			?>
-					<option>Whitby - March 12 </option>
-					<option>Oshawa - February 4</option>
+					
 		</select></p>
 		<br>
 		<a href=""><button class="styled-button">Add to Cart</button></a>
@@ -104,6 +103,8 @@
 	  <div  id="tabs-2">
 	  
 			<button  class="styled-button" onclick="printContent('nutrionLabel')">Print Nutritional Label</button>
+			
+			<br><br>
 			
 			<div id="nutrionLabel">
 			
@@ -321,6 +322,7 @@
 	  
 	  <div id="tabs-3">
 		     <button class="styled-button" onclick="printContent('ingredients-list')">Print Ingredients List</button>
+			 <br>
 			 <div id="ingredients-list">
 				 <ul id="ingredients">
 					 <li>250g plain flour</li>

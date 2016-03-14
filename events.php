@@ -10,7 +10,7 @@
 		   border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
 	<br/>
 	
-	<table>
+	<table style="font-size:12pt">
 		<th>City</th>
 		<th>Date</th>
 		<?php 
