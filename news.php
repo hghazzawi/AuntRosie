@@ -1,6 +1,6 @@
 <?php $title="NewsLetter"; include("templates/header.php"); ?>
 <br><br>
-<div style="width: 700px ;margin-left: auto ;margin-right: auto ;">
+<div style="width: 50% ;margin-left: auto ;margin-right: auto ;">
 	<h1 style="text-align: center">Newsletter</h1>
 	<br/>
 	<hr style="border: 0; height: 0; 
