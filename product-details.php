@@ -20,7 +20,7 @@
 
 ?>
 <br>
-<div style="width: 1000px ;margin-left: auto ;margin-right: auto ;">
+<div style="width: 75% ;margin-left: auto ;margin-right: auto ;">
 	
 	<p>
 	
@@ -52,6 +52,16 @@
 		<br>
 		
 		<p style="font-size:14pt;font-weight:bold;font-family:Roboto">Venue:<br><select >
+		
+			<?php
+			
+				$result = pg_query($connection, "select venuelocation,venuedate from venuelocation");
+				
+				while ($row = pg_fetch_assoc($result)) {			
+					echo "<option>".$row['venuelocation']." on ".$row['venuedate']."</option>
+					";
+				}
+			?>
 					<option>Whitby - March 12 </option>
 					<option>Oshawa - February 4</option>
 		</select></p>
