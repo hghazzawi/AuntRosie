@@ -1,4 +1,24 @@
-<?php $title="Product Details"; include("templates/header.php"); ?>
+<?php $title="Product Details"; include("templates/header.php"); 
+
+    if (empty($_GET['prod_code']))
+	{
+		header("location:index.php");
+		ob_flush();
+	}
+	
+	else if (isset($_GET['prod_code']))
+	{
+		$productcode=$_GET['prod_code'];
+		
+		
+		$q=pg_prepare($connection,"products","select*from main where productcode=$productcode");
+		$result=pg_execute($connection,"products",array());
+		
+		$result_set=pg_fetch_assoc($result,0);
+	}
+
+
+?>
 <br>
 <div style="width: 1000px ;margin-left: auto ;margin-right: auto ;">
 	
@@ -10,7 +30,7 @@
 	
 		
 	<div id="productDesc">
-		<h3>Pie Title  $9.99</h3>
+		<h3><?php echo $result_set['productname'] ?>  $9.99</h3>
 		<hr style="border: 0; height: 0; 
 		   border-top: 1px solid rgba(0, 0, 0, 0.1); 
 		   border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
@@ -70,29 +90,29 @@
 			
 			<div id="nutrionLabel">
 			
-			  <header class="performance-facts__header">
+			  <!--<header class="performance-facts__header">
 				<h1 class="performance-facts__title"></h1>
 				<p>Serving Size 1/2 cup (about 82g)
 				<p>Serving Per Container 8</p>
-			  </header>
+			  </header>-->
 			  <table class="performance-facts__table">
-				<thead>
+				<!--<thead>
 				  <tr>
 					<th colspan="3" class="small-info">
 					  Amount Per Serving
 					</th>
 				  </tr>
-				</thead>
+				</thead>-->
 				<tbody>
 				  <tr>
 					<th colspan="2">
 					  <b>Calories</b>
-					  200
+					  <?PHP echo $result_set['calories'] ?>
 					</th>
-					<td>
+					<!--<td>
 					  Calories from Fat
 					  130
-					</td>
+					</td>-->
 				  </tr>
 				  <tr class="thick-row">
 					<td colspan="3" class="small-info">
@@ -102,29 +122,29 @@
 				  <tr>
 					<th colspan="2">
 					  <b>Total Fat</b>
-					  14g
+					  <?PHP echo $result_set['fat'] ?>
 					</th>
-					<td>
+					<!--<td>
 					  <b>22%</b>
-					</td>
+					</td>-->
 				  </tr>
 				  <tr>
 					<td class="blank-cell">
 					</td>
 					<th>
 					  Saturated Fat
-					  9g
+					  <?PHP echo $result_set['saturatedfat'] ?>
 					</th>
-					<td>
+					<!--<td>
 					  <b>22%</b>
-					</td>
+					</td>-->
 				  </tr>
 				  <tr>
 					<td class="blank-cell">
 					</td>
 					<th>
 					  Trans Fat
-					  0g
+					  <?PHP echo $result_set['transfat'] ?>
 					</th>
 					<td>
 					</td>
@@ -132,47 +152,47 @@
 				  <tr>
 					<th colspan="2">
 					  <b>Cholesterol</b>
-					  55mg
+					 <?PHP echo $result_set['cholesterol'] ?>
 					</th>
-					<td>
+					<!--<td>
 					  <b>18%</b>
-					</td>
+					</td>-->
 				  </tr>
 				  <tr>
 					<th colspan="2">
 					  <b>Sodium</b>
-					  40mg
+					  <?PHP echo $result_set['sodium'] ?>
 					</th>
-					<td>
+					<!--<td>
 					  <b>2%</b>
-					</td>
+					</td>-->
 				  </tr>
 				  <tr>
 					<th colspan="2">
 					  <b>Total Carbohydrate</b>
-					  17g
+					   <?PHP echo $result_set['carbohydrates'] ?>
 					</th>
-					<td>
+					<!--<td>
 					  <b>6%</b>
-					</td>
+					</td>-->
 				  </tr>
 				  <tr>
 					<td class="blank-cell">
 					</td>
 					<th>
 					  Dietary Fiber
-					  1g
+					  <?PHP echo $result_set['dietaryfiber'] ?>
 					</th>
-					<td>
+					<!--<td>
 					  <b>4%</b>
-					</td>
+					</td>-->
 				  </tr>
 				  <tr>
 					<td class="blank-cell">
 					</td>
 					<th>
 					  Sugars
-					  14g
+					  <?PHP echo $result_set['sugar'] ?>
 					</th>
 					<td>
 					</td>
@@ -180,7 +200,7 @@
 				  <tr class="thick-end">
 					<th colspan="2">
 					  <b>Protein</b>
-					  3g
+					  <?PHP echo $result_set['protein'] ?>
 					</th>
 					<td>
 					</td>
@@ -188,7 +208,7 @@
 				</tbody>
 			  </table>
 			  
-			  <table class="performance-facts__table--grid">
+			  <!--<table class="performance-facts__table--grid">
 				<tbody>
 				  <tr>
 					<td colspan="2">
@@ -211,7 +231,7 @@
 					</td>
 				  </tr>
 				</tbody>
-			  </table>
+			  </table>-->
 			  
 			  <p class="small-info">* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs:</p>
 			  

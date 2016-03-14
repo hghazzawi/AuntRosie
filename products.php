@@ -15,7 +15,9 @@ if (!$result) {
   exit;
 }
 
- dump($result);
+
+
+// dump($result);
 
 
 
@@ -28,39 +30,22 @@ if (!$result) {
 
     <div style="margin-left: auto ;margin-right: auto ;width:1500px">
 		<ul class="rig columns-4">
-			<a href="product-details.php">
-				<li>
-					<img src="img/pies/pie.jpg" />
-					<h3 style="text-align: center">Best PIE</h3>
-					
-					
-				</li>
-			</a>
-			<a href="product-details.php">
-				<li>
-					<img src="img/pies/pie.jpg" />
-					<h3 style="text-align: center">Best PIE</h3>
-					
-					
-				</li>
-			</a>
-			<a href="product-details.php">
-				<li>
-					<img src="img/pies/pie.jpg" />
-					<h3 style="text-align: center">Best PIE</h3>
-					
-					 
-				</li>
-			</a>
-			<a href="product-details.php">
-				<li>
-					<img src="img/pies/pie.jpg" />
-					<h3 style="text-align: center">Best PIE</h3>
-					
-					 
-				</li>
-			</a>
+		
+			<?php 
 			
+				while ($row = pg_fetch_assoc($result)) {			
+					echo "<a href='product-details.php?prod_code=".$row['productcode']."'>
+							<li>
+								<img src='img/pies/pie.jpg' />
+								<h3 style='text-align: center'>".$row['productname']."</h3>
+							</li>
+						</a>
+					";
+				}
+				
+			?>
+			
+						
 			
 		</ul>
 	</div>
