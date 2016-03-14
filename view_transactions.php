@@ -26,20 +26,23 @@ function cur_to_int($input)
 
 
 $transactions = pg_execute($connection, "get_all_transactions", Array());
-echo '<table id="transactions"><tr><th>ID</th><th>Date</th><th>Description</th><th>Earnings</th><th>Expences</th></tr>';
+echo '<table id="transactions"><tr><th>ID</th><th>Date</th><th>Description</th><th>Expences</th><th>Earnings</th></tr>';
 $count = pg_num_rows($transactions);
 $i = 0;
+$total = 0;
 while($i < $count)
 {
 	$row = pg_fetch_assoc($transactions);
 	echo '<tr><td>'.$row['transactionid'].'</td><td>'.$row['transactiondate'].'</td><td>'.$row['description'].'</td><td>';
-	if (0 < cur_to_int($row['cost']))
+  $value = cur_to_int($row['cost']);
+  $total += $value;
+	if (0 > $value)
 		echo $row['cost'].'</td><td>';
 	else
 		echo '</td><td>'.$row['cost'];
 	echo '</td></tr>';
 	$i++;
 }
-echo '</table>';
+echo '<tr><td colspan="4"></td><td>$'.number_format($total, 2).'</td></tr></table>';
 
 include("templates/footer.php"); ?>
