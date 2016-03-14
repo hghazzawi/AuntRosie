@@ -25,7 +25,8 @@
 	<p>
 	
 	<div style="float:left;padding-right:20px;" id="productThumbnail">
-		<img src="img/pies/pie.jpg" width="100px" /><br>
+		
+		<img src="img/products/<?php echo $result_set['productimagebig'] ?>" width="100px" /><br>
 	</div>
 	
 		
