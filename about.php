@@ -1,7 +1,7 @@
 <?php $title="About Us"; include("templates/header.php"); ?>
 <br>
 
-<div style="width: 1000px ;margin-left: auto ;margin-right: auto ;">
+<div style="width: 50% ;margin-left: auto ;margin-right: auto ;">
 	<h1 style="text-align: center">About Us</h1>
 	<br>
 	<div id="history">
@@ -38,6 +38,13 @@
 	</div>
 	
 	
+	
+
+
+	
+	<br>
+	
+	<br>
 </div>
 
 

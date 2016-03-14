@@ -78,7 +78,7 @@ include_once("constants.php"); include_once ("db.php"); ?>
                         <li><a href="about.php">About</a></li>
 						 <li><a href="products.php">Products</a></li>
                         <li><a href="news.php">Newsletter</a></li>
-                        <li><a>Upcoming Events</a></li>
+                        <li><a href="events.php">Upcoming Events</a></li>
                         <li><a>Cart</a></li>
                      </ul>
                   </div>

@@ -25,12 +25,21 @@
 	<p>
 	
 	<div style="float:left;padding-right:20px;" id="productThumbnail">
-		<img src="img/pies/pie.jpg" width="100px" /><br>
+		
+		<img src="img/products/<?php echo $result_set['productimagebig'] ?>" width="100px" /><br>
 	</div>
 	
 		
 	<div id="productDesc">
-		<h3><?php echo $result_set['productname'] ?>  $9.99</h3>
+		
+		<?php
+					
+			$q="select costperunit from productinventory where productcode=".$result_set['productcode'];
+			$price=pg_query($connection, $q);
+			$price=pg_fetch_array($price)
+		?>
+		
+		<h3><?php echo $result_set['productname']; ECHO "   "; echo $price['costperunit']; ?></h3>
 		<hr style="border: 0; height: 0; 
 		   border-top: 1px solid rgba(0, 0, 0, 0.1); 
 		   border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
@@ -60,8 +69,7 @@
 					";
 				}
 			?>
-					<option>Whitby - March 12 </option>
-					<option>Oshawa - February 4</option>
+					
 		</select></p>
 		<br>
 		<a href=""><button class="styled-button">Add to Cart</button></a>
@@ -95,6 +103,8 @@
 	  <div  id="tabs-2">
 	  
 			<button  class="styled-button" onclick="printContent('nutrionLabel')">Print Nutritional Label</button>
+			
+			<br><br>
 			
 			<div id="nutrionLabel">
 			
@@ -312,6 +322,7 @@
 	  
 	  <div id="tabs-3">
 		     <button class="styled-button" onclick="printContent('ingredients-list')">Print Ingredients List</button>
+			 <br>
 			 <div id="ingredients-list">
 				 <ul id="ingredients">
 					 <li>250g plain flour</li>
@@ -340,33 +351,24 @@
 <div>
 	<br>
 	<h3 style="text-align: center" >Related Items</h3><br>
-	<div style="margin-left: auto ;margin-right: auto ;width:800px">
+	<div style="margin-left: auto ;margin-right: auto ;width:70%">
 		<ul class="rig columns-3">
-			<a href="product-details.php">
-				<li>
-					<img src="img/pies/pie.jpg" />
-					<h3 style="text-align: center">Best PIE</h3>
-					
-					
-				</li>
-			</a>
+		
+			<?php 
 			
-			<a href="product-details.php">
-				<li>
-					<img src="img/pies/pie.jpg" />
-					<h3 style="text-align: center">Best PIE</h3>
-					
-					 
-				</li>
-			</a>
-			<a href="product-details.php">
-				<li>
-					<img src="img/pies/pie.jpg" />
-					<h3 style="text-align: center">Best PIE</h3>
-					
-					 
-				</li>
-			</a>
+				$result = pg_query($connection, "select*from main ORDER BY random() limit 3");
+				
+				while ($row = pg_fetch_assoc($result)) {			
+					echo "<a href='product-details.php?prod_code=".$row['productcode']."'>
+							<li>
+								<img src='img/products/".$row['productimagebig']."' />
+								<h3 style='text-align: center'>".$row['productname']."</h3>
+							</li>
+						</a>
+					";
+				}
+				
+			 ?>
 			
 			
 		</ul>

@@ -29,6 +29,13 @@ if (!$result) {
 
 
     <div style="margin-left: auto ;margin-right: auto ;width:95%">
+		<h1 style="text-align: center">Browse Our Products</h1>
+		<br/>
+		<hr style="border: 0; height: 0; 
+			   border-top: 1px solid rgba(0, 0, 0, 0.1); 
+			   border-bottom: 1px solid rgba(255, 255, 255, 0.3);">
+		<br/>
+	
 		<ul class="rig columns-4">
 		
 			<?php 
