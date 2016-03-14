@@ -2,5 +2,5 @@
 define("MAX_PRODUCTS_PER_ROW", 6);
 
 //TABLES
-define("PRODUCT_TABLE", "main");
-
+define("PRODUCT_TABLE", "Main");
+define("TRANSACTION_TABLE", "Transactions");
