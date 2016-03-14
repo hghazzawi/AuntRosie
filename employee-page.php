@@ -410,7 +410,7 @@ if (!$result) {
   exit;
 }	
 while ($row = pg_fetch_assoc($result)) {
-	echo"ASDASDASDASD
+	echo"
 	<tr>
 		<td width='30%'><label for='ingredient' id='".$row['productname']."'>".$row['productname']."</label></td>
         <td width='25%'><input id='amount' name='amount' value='1'/></td>
@@ -553,18 +553,20 @@ if (!$connection) {
   exit;
 }
 
-$result = pg_query($connection, "SELECT name, quantityonhand FROM Accessories");
+$result = pg_query($connection, "SELECT accessorycode, name, quantityonhand FROM Accessories");
 if (!$result) {
   echo "An error occurred.\n";
   exit;
 }
 while ($row = pg_fetch_assoc($result)) {
+	$acodeInput=$row['accessorycode'];
+	
 	echo"
 	<tr>
 		<td width='30%'><label for='ingredient'>".$row['name']."</label></td>
-        <td width='25%'><input id='amount' name='amount' value='1'/></td>
-		<td width='10%'><input type='image' src='img\controls\more.png' alt='add ingredient' /></td>
-		<td width='10%'><input type='image' src='img\controls\less.png' alt='remove ingredient' /></td>
+        <td width='25%'><input id='".$row['accessorycode']."' class='numberinput' name='amount' value='1'/></td>
+		<td width='10%'><a href='addQuantity.php?acode=".$row['accessorycode']."'> <img src='img\controls\more.png' alt='add ingredient' /></a></td>
+		<td width='10%'><input type='image' src='img\controls\less.png' alt='remove ingredient' onclick='removeQuantity()' /></td>
 		<td width='25%'><label for='quantity'>".$row['quantityonhand']."</label></td>
     </tr>";
 }
