@@ -118,12 +118,13 @@ while ($row = pg_fetch_assoc($result)) {
 		<th>Quantity</th>
 		<th>Price</th>
 	</tr>
-	<tr id="chickenpot">
-		<td><input type="image" src="img\controls\Cross.png" alt="Remove Item" onclick="document.getElementById('chickenpot').style.visible = 'false';"/></td>
+	<div id="chickenpot">
+	<tr>
+		<td><input type="image" src="img\controls\Cross.png" alt="Remove Item" onclick="document.getElementById('chickenpot').style.hidden = 'true';"/></td>
 		<td><label for="ingredient">Strawberry Jam</label></td>
         <td><label for="amount" name="amount"/>9</td>
 		<td><label for="price">$34.96</label></td>
-    </tr>
+    </tr></div>
 	<tr>
 		<td><input type="image" src="img\controls\Cross.png" alt="Remove Item" /></td>
 		<td><label for="ingredient">Steak and Stilton</label></td>
@@ -143,7 +144,8 @@ while ($row = pg_fetch_assoc($result)) {
 		<td><label for="price">$5.96</label></td>
     </tr>
 	<tfoot>
-		<td></td>
+		<td><form><input type="submit" value="Submit">
+</form></td>
 		<td></td>
 		<td><label for="">Total:</label></td>
 		<td><label for="Totalprice">$57.90</label></td>
