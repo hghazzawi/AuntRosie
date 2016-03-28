@@ -118,28 +118,28 @@ while ($row = pg_fetch_assoc($result)) {
 		<th>Quantity</th>
 		<th>Price</th>
 	</tr>
-	<tr>
-		<td><input type="image" src="img\controls\Cross.png" alt="Remove Item" /></td>
-		<td><label for="ingredient">Strawberry Jelly</label></td>
+	<tr id="chickenpot">
+		<td><input type="image" src="img\controls\Cross.png" alt="Remove Item" onclick="document.getElementById('chickenpot').style.visible = 'false';"/></td>
+		<td><label for="ingredient">Strawberry Jam</label></td>
         <td><label for="amount" name="amount"/>9</td>
 		<td><label for="price">$34.96</label></td>
     </tr>
 	<tr>
 		<td><input type="image" src="img\controls\Cross.png" alt="Remove Item" /></td>
-		<td><label for="ingredient">Steak and Stout</label></td>
+		<td><label for="ingredient">Steak and Stilton</label></td>
         <td><label for="amount" name="amount"/>1</td>
 		<td><label for="price">$7.99</label></td>
     </tr>
 	<tr>
 		<td><input type="image" src="img\controls\Cross.png" alt="Remove Item" /></td>
-		<td><label for="ingredient">Ox Liver</label></td>
+		<td><label for="ingredient">Stew Pie</label></td>
         <td><label for="amount" name="amount"/>1</td>
 		<td><label for="price">$8.99</label></td>
     </tr>
 	<tr>
 		<td><input type="image" src="img\controls\Cross.png" alt="Remove Item" /></td>
-		<td><label for="ingredient">Apple Butter</label></td>
-        <td><label for="amount" name="amount"/>9</td>
+		<td><label for="ingredient">Peach Butter</label></td>
+        <td><label for="amount" name="amount"/>1</td>
 		<td><label for="price">$5.96</label></td>
     </tr>
 	<tfoot>
